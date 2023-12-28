@@ -13,9 +13,9 @@ import Register from '@/views/member/Join.vue'
 // 라우터
 const routes = [
   {
-    path: '',
+    path: '/',
     name: 'root',
-    component: home,
+    component: () => import('@/views/shots/Shots.vue'),
   },
   {
     path: '/home',
@@ -47,16 +47,6 @@ const routes = [
     name: 'Register',
     component: Register,
   }
-  // {
-  //     path: "/subscriptions",
-  //     name: "subscriptions",
-  //     component: subscriptions,
-  // },
-  // {
-  //     path: "/library",
-  //     name: "library",
-  //     component: library,
-  // }
 ]
 // 라우터 생성
 const router = createRouter({
